@@ -217,9 +217,9 @@ margin-bottom: 1rem;
 .itens-cardapio
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 550px));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
     justify-content: center;
-    width: 80%;
+    width: 90%;
     margin-top: 2rem;
     margin-bottom: 2rem;
     align-items: center;
@@ -330,6 +330,78 @@ margin-bottom: 1rem;
     color: maroon;
 }
 
+@media (max-width: 1200px) {
+    .main {
+        display: block;
+        padding-left: 0;
+    }
+
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 12%;
+
+        padding-left: 0px;
+    }
+}
 
 
+
+@media (max-width: 992px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 45%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0px 40px; 
+    }
+
+    .content .list-menu {
+        display: none;
+    }
+
+    .one
+    .two
+    .three {
+        width: 80px;
+        height: 2px;
+        background-color: white;
+        margin: 6px auto;
+        transition: 0.5s;  
+    }
+    
+    .menu-tuggle {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+
+    
+    .itens-cardapio {
+        grid-template-columns: repeat(2, minmax(50px, 350px));
+       
+    }
+
+    .itens-cardapio.info h4 {
+        margin-left: 12rem;
+    }
+
+
+}
 
