@@ -17,6 +17,9 @@ width: 100vw;
 height: 100vw;
 font-size: 62.5%;
 overflow-x: hidden;
+scroll-behavior: smooth;
+background-color: #1f1e1f;
+
 
 
 }
@@ -330,6 +333,11 @@ margin-bottom: 1rem;
     color: maroon;
 }
 
+
+
+/* verificar a responsividade de cada media  */
+
+
 @media (max-width: 1200px) {
     .main {
         display: block;
@@ -353,6 +361,8 @@ margin-bottom: 1rem;
         font-size: 50%;
     }
 }
+
+
 
 @media (max-width: 768px) {
     html {
@@ -391,8 +401,61 @@ margin-bottom: 1rem;
         z-index: 1000;
     }
 
+    .content.on {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        bottom: 0%;
+        width: 100vh;
+        height: 100vh;
+        background-color: rgba(30, 31, 30, 0.8);
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .content.on.logo {
+        display: none;
+    }
+
+    .content.on.menu-tuggle {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+
+    .content.on.list-menu {
+        display: block;
+    }
+
+    .content.on.list-menu li {
+        display: flex;
+        justify-content: center;
+    }
     
+    .content.on.list-menu li a {
+    font-size: 2rem;
+    display: block;        
+    }
+
+    .content.on.menu-tuggle .two {
+        opacity: 0;
+    }
+
+
+    /* verificar o posicionamento do X */
+    .content.on.menu-tuggle .one {
+        transform: rotate(45deg) translate(5px, -8px); 
+    }
+
+    .content.on.menu-tuggle .three {
+        transform: rotate(-45deg) translate(20px, -6px); 
+    }
+
+
+
+
     .itens-cardapio {
         grid-template-columns: repeat(2, minmax(50px, 350px));
        
@@ -402,6 +465,123 @@ margin-bottom: 1rem;
         margin-left: 12rem;
     }
 
+    .contatos-secao {
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+    }
    
+    .contatos-secao div {
+        margin: 1rem;
+    }
 }
 
+
+
+@media (max-width: 600px) {
+    .conteudo-principal h1 {
+        width: 500px;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .conteudo-principal h2 {
+        font-size: 2rem;
+    }
+
+    .itens-cardapio {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 350px));
+    }
+
+    .sobre-nos {
+        width: 400px;
+        height: 250px;
+        margin-left: 10px;
+    }
+
+    .sobre-nos p {
+        text-align: center;
+        width: 400px;
+    }
+
+    .contatos-secao{
+        width: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    .btn {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+    }
+
+    .btn  button {
+        font-size: 1.5rem;
+        width: 100%;
+
+
+    }
+
+    .conteudo-principal h1 {
+        width: 350px;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .conteudo-principal h2 {
+        width: 200px;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 395px) {
+    .sobre-nos img {
+        width: 250px;
+        height: auto;
+        margin-left: 10px;
+
+    }
+
+    .contentsobre p {
+        text-align: center;
+        width: 250px;
+    }
+
+    .itens-cardapio {
+        width: 50%;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 350px));
+
+    }
+
+    .itens-cardapio img {
+        width: 50%;
+        height: auto;
+    }
+
+    .itens-cardapio div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .itens-cardapio.info {
+        width: 1005;
+        height: 150px;
+    }
+
+    .itens-cardapio.info h4 {
+        grid-template-columns: 93px 150px;
+    }
+
+    .itens-cardapio.info.pedir {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+}
