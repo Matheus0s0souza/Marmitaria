@@ -219,13 +219,13 @@ margin-bottom: 1rem;
 
 .itens-cardapio
 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
-    justify-content: center;
-    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 10%; /* Ajuste a largura conforme necessário */
     margin-top: 2rem;
     margin-bottom: 2rem;
-    align-items: center;
+    align-items: flex-start;
     gap: 30px;    
 }
 
@@ -234,9 +234,9 @@ margin-bottom: 1rem;
     background-color: rgb(221, 221, 221);
     border: none;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: 1.5rem;
 }
 
